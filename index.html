@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/buttons.css">
+	<link href="css/flat-ui.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/24.ico">
+    <style type="text/css">
+	    body{
+	    	background-color: #1ABC9C;
+	    	font-family:'微软雅黑';
+	    }
+	    .search
+	    {
+	    	display: block;
+		    margin-left: auto;
+			margin-right: auto;
+			height: 15em;
+	    }
+	    .search input{
+	    	position: relative;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    box-shadow: 3px 3px 0px 0px;
+		    height: 3em;
+	    }
+	    .container
+	    {
+
+	    }
+		.row .span3
+		{
+			float: left;
+		    width: 15em;
+		    margin-left: 1em;
+		}
+		.row .span3 .tile p{
+			margin: 0px 0px 5px;
+		}
+    </style>
+</head>
+<body>
+	<div class='container'>
+		<div class='row search'>
+			<input type="text" class="col-md-6 col-md-offset-3" placeholder="百度一下" autofocus="autofocus">
+		</div>
+		<div class="row demo-tiles">
+	        <div class="span3">
+	          <div class="tile">
+	            <img class="tile-image big-illustration" alt="" src="img\icons\png\Mail.png">
+	            <h3 class="tile-title">Web Oriented</h3>
+	            <p>100% convertable to HTML/CSS layout.</p>
+	            <a class="btn btn-success btn-large btn-block" href="#">Get Pro</a>
+	          </div>
+	        </div>
+	        <div class="span3">
+	          <div class="tile">
+	            <img class="tile-image big-illustration" alt="" src="img\icons\png\Mail.png">
+	            <h3 class="tile-title">Web Oriented</h3>
+	            <p>100% convertable to HTML/CSS layout.</p>
+	            <a class="btn btn-success btn-large btn-block" href="#">Get Pro</a>
+	          </div>
+	        </div>
+	        <div class="span3">
+	          <div class="tile">
+	            <img class="tile-image big-illustration" alt="" src="img\icons\png\Mail.png">
+	            <h3 class="tile-title">Web Oriented</h3>
+	            <p>100% convertable to HTML/CSS layout.</p>
+	            <a class="btn btn-success btn-large btn-block" href="#">Get Pro</a>
+	          </div>
+	        </div>
+	        <div class="span3">
+	          <div class="tile">
+	            <img class="tile-image big-illustration" alt="" src="img\icons\png\Mail.png">
+	            <h3 class="tile-title">Web Oriented</h3>
+	            <p>100% convertable to HTML/CSS layout.</p>
+	            <a class="btn btn-success btn-large btn-block" href="#">Get Pro</a>
+	          </div>
+	        </div>
+	    </div>
+      </div>
+	</div>	
+</body>
+</html>
+<script type="text/javascript" src='js/jquery-2.2.4.min.js'></script>
+<script type="text/javascript" src='js/bootstrap.min.js'></script>
+<script type="text/javascript">
+	$('.search input').focus(function(event) {
+		$(window).keydown(function(event) {
+			var keywords=$('.search input').val();
+			switch(event.keyCode){
+				case 13:
+				var url='https://www.baidu.com/s?wd='+keywords;
+				location.href=url;
+				break;
+			}
+		});
+
+		/*$(window).keydown(function(){
+			switch(event.keyCode){
+				case 13:
+					window.location='www.baidu.com';
+				break;
+			}
+		});*/
+	});
+</script>
